@@ -49,7 +49,7 @@ def start(update, context):
         text = LOG_TEXT.format(update.message.chat.id,update.message.chat.id,update.message.chat.first_name,"" if update.message.chat.last_name == None else " "+update.message.chat.last_name),
         parse_mode = "html"
     )
-    inline_keyboard = [[InlineKeyboardButton("💬GROUP💬", url = f"{vars.GROUP_LINK}"), InlineKeyboardButton("📢CHANNEL📢", url = f"{vars.CHANNEL_LINK}")], [InlineKeyboardButton("❗ABOUT❗", callback_data="about")]]
+    inline_keyboard = [[InlineKeyboardButton("💬𝗥𝗘𝗤𝗨𝗘𝗦𝗧 𝗚𝗥𝗢𝗨𝗣💬", url = f"{vars.GROUP_LINK}"), InlineKeyboardButton("📢𝗠𝗔𝗜𝗡 𝗖𝗛𝗔𝗡𝗡𝗘𝗟📢", url = f"{vars.CHANNEL_LINK}")],[InlineKeyboardButton("😍𝗞𝗗𝗥𝗔𝗠𝗔𝗦 𝗖𝗛𝗔𝗡𝗡𝗘𝗟😍",url='https://t.me/k_Drama_Hindi_Dubbed_avl'), InlineKeyboardButton("😇𝗠𝗢𝗩𝗜𝗘𝗦 𝗖𝗛𝗔𝗡𝗡𝗘𝗟😇",'https://t.me/+A1kqNqAowME4NTM9'],[InlineKeyboardButton("❗𝗢𝗪𝗡𝗘𝗥❗", url="https://t.me/SIRISH_123")]]
     update.message.reply_text(
         "*Hi {}!*\n".format(update.message.chat.first_name)+START_TEXT,
         reply_markup = InlineKeyboardMarkup(inline_keyboard),
@@ -63,7 +63,7 @@ def about(update, context):
     else:
         message = update.callback_query.message
     message.reply_text(
-        "*My Name: [{}](tg://user?id={})\nSource: [Feedback\-and\-Request\-Bot\-TG](https://github.com/skr1405/Feedback\-and\-Request\-Bot\-TG)*".format(bot_details.first_name, bot_details.id),
+        "*𝗠𝗬 𝗡𝗔𝗠𝗘: [{}](tg://user?id={})\n𝗖𝗥𝗘𝗔𝗧𝗘𝗥: [𝗦𝗜𝗥𝗜𝗦𝗛](https://t.me/SIRISH_123)\n𝗕𝗔𝗖𝗞𝗨𝗣 𝗖𝗛𝗔𝗡𝗡𝗘𝗟: [𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘](https://t.me/KDRAMSHINDI)\n𝗞𝗗𝗥𝗔𝗠𝗔𝗦 𝗖𝗛𝗔𝗡𝗡𝗘𝗟: [𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘](https://t.me/k_Drama_Hindi_Dubbed_avl)\n𝗠𝗢𝗩𝗜𝗘𝗦 𝗖𝗛𝗔𝗡𝗡𝗘𝗟: [𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘](https://t.me/+A1kqNqAowME4NTM9)*".format(bot_details.first_name, bot_details.id),
         parse_mode = "markdownv2",
         disable_web_page_preview = True
     )
