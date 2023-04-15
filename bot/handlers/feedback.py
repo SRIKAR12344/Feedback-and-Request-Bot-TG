@@ -49,7 +49,7 @@ def start(update, context):
         text = LOG_TEXT.format(update.message.chat.id,update.message.chat.id,update.message.chat.first_name,"" if update.message.chat.last_name == None else " "+update.message.chat.last_name),
         parse_mode = "html"
     )
-    inline_keyboard = [[InlineKeyboardButton("💬𝗥𝗘𝗤𝗨𝗘𝗦𝗧 𝗚𝗥𝗢𝗨𝗣💬", url = f"{vars.GROUP_LINK}"), InlineKeyboardButton("📢𝗠𝗔𝗜𝗡 𝗖𝗛𝗔𝗡𝗡𝗘𝗟📢", url = f"{vars.CHANNEL_LINK}")],[InlineKeyboardButton("😍𝗞𝗗𝗥𝗔𝗠𝗔𝗦 𝗖𝗛𝗔𝗡𝗡𝗘𝗟😍",url='https://t.me/k_Drama_Hindi_Dubbed_avl'), InlineKeyboardButton("😇𝗠𝗢𝗩𝗜𝗘𝗦 𝗖𝗛𝗔𝗡𝗡𝗘𝗟😇",'https://t.me/+A1kqNqAowME4NTM9'],[InlineKeyboardButton("❗𝗢𝗪𝗡𝗘𝗥❗", url="https://t.me/SIRISH_123")]]
+    inline_keyboard = [[InlineKeyboardButton("💬𝗥𝗘𝗤𝗨𝗘𝗦𝗧 𝗚𝗥𝗢𝗨𝗣💬", url = f"{vars.GROUP_LINK}"), InlineKeyboardButton("📢𝗠𝗔𝗜𝗡 𝗖𝗛𝗔𝗡𝗡𝗘𝗟📢", url = f"{vars.CHANNEL_LINK}")],[InlineKeyboardButton("😍𝗞𝗗𝗥𝗔𝗠𝗔𝗦 𝗖𝗛𝗔𝗡𝗡𝗘𝗟😍",url='https://t.me/k_Drama_Hindi_Dubbed_avl'), InlineKeyboardButton("😇𝗠𝗢𝗩𝗜𝗘𝗦 𝗖𝗛𝗔𝗡𝗡𝗘𝗟😇",'https://t.me/+A1kqNqAowME4NTM9')],[InlineKeyboardButton("❗𝗢𝗪𝗡𝗘𝗥❗", url="https://t.me/SIRISH_123")]]
     update.message.reply_text(
         "*Hi {}!*\n".format(update.message.chat.first_name)+START_TEXT,
         reply_markup = InlineKeyboardMarkup(inline_keyboard),
